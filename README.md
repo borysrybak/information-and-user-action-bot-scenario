@@ -54,9 +54,9 @@ Various ways to create an Azure Account with a subscription.
 
 ## Testing
 
-<img src="assets/example-1.gif" data-canonical-src="assets/example-1.gif" width="260">
+<img src="assets/example-1.gif" data-canonical-src="assets/example-1.gif" width="400">
 
-<img src="assets/example-2.gif" data-canonical-src="assets/example-2.gif" width="260">
+<img src="assets/example-2.gif" data-canonical-src="assets/example-2.gif" width="400">
 
 ## Learnings
 
