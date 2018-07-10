@@ -12,7 +12,7 @@ Java implementation example of information and user action bot scenario (QnA Mak
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
-<img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="550">
+<img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="720">
 
 ## Table of Contents
 
@@ -54,8 +54,9 @@ Various ways to create an Azure Account with a subscription.
 
 ## Testing
 
-![Example 1](assets/example-1.gif)
-![Example 2](assets/example-2.gif)
+<img src="assets/example-1.gif" data-canonical-src="assets/example-1.gif" width="260">
+
+<img src="assets/example-2.gif" data-canonical-src="assets/example-2.gif" width="260">
 
 ## Learnings
 
