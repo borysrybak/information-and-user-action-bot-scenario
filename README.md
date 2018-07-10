@@ -52,6 +52,9 @@ Various ways to create an Azure Account with a subscription.
 
 ## Testing
 
+![Example 1](assets/example-1.gif)
+![Example 2](assets/example-2.gif)
+
 ## Learnings
 
 ## Credits
