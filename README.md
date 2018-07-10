@@ -8,9 +8,11 @@ Java implementation example of information and user action bot scenario (QnA Mak
 
 ### Solution Base Overview
 
-<img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600" />
-![Implemented architecure](assets/dialog_architecture.png)
-![Dialog flowchart](assets/dialog_flowchart.png)
+<img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600">
+
+<img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
+
+<img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="550">
 
 ## Table of Contents
 
