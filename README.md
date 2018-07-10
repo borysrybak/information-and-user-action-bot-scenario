@@ -18,6 +18,17 @@ Java implementation example of information and user action bot scenario (QnA Mak
 - [Overview](#overview)
     - [Description](#description)
     - [Solution Base Overview](#solution-base-overview)
+- [Prerequisites](#prerequisites)
+  - [Azure Subscription](#azure-subscription)
+  - [QnA Maker resource](#qna-maker-resource)
+  - [GitHub Account](#github-account)
+  - [Wit.ai Account](#wit.ai-account)
+  - [Java Environment](#java-environment)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Learnings](#learnings)
+- [Credits](#credits)
+- [Helpful Materials](#helpful-materials)
 
 ## Prerequisites
 
@@ -34,3 +45,15 @@ Various ways to create an Azure Account with a subscription.
 ### GitHub Account
 
 ### Wit.ai Account
+
+### Java Environment
+
+## Usage
+
+## Testing
+
+## Learnings
+
+## Credits
+
+## Helpful Materials
