@@ -1,6 +1,5 @@
 private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceContact, Contact targetContact, String relatedEntityType, String relatedEntityCode, String dialogType, String message) {
 	Dialog dialog = null;
-	
 	try {
 		if (DialogTags.TASK_ASSISTANCE_ANNOUNCEMENT.getCode().equals(dialogType)) {
 			QnaMakerKnowledgeBaseRestClient client = new QnaMakerKnowledgeBaseRestClient();
@@ -32,7 +31,7 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 		}
 
 		return dialog;
-	} catch (Exception e) {
+	} catch(Exception e) {
 		throw new DataAccessException("Error while running taskService.autoReplyToBroker", e);
 	}
 }
