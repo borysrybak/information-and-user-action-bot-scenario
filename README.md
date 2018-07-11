@@ -18,8 +18,8 @@ Java implementation example of information and user action bot scenario (QnA Mak
 
 - [Project](information-and-user-action-bot-scenario)
 - [Overview](#overview)
-    - [Description](#description)
-    - [Solution Base Overview](#solution-base-overview)
+  - [Description](#description)
+  - [Solution Base Overview](#solution-base-overview)
 - [Prerequisites](#prerequisites)
   - [Azure Subscription](#azure-subscription)
   - [QnA Maker resource](#qna-maker-resource)
