@@ -132,7 +132,6 @@ public class QnaMakerKnowledgeBaseRestClient {
     }
 
     private static String getAnswersPost(URL url, String content) throws Exception {
-     
         String restOutput = null;
 
         try {
