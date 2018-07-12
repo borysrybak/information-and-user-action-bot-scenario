@@ -4,41 +4,49 @@
 
 ### Description
 
-Java implementation example of information and user action bot scenario (QnA Maker + Wit.AI)
+[Java](https://java.com/pl/download/) implementation example of information and user action bot scenario ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/))
+
+Engagement included:
+
+- [x] Implementing [QnA Maker](https://www.qnamaker.ai/) service by creating a Q&A bot answering questions of brokers towards the underwriters of [Generali Greece](https://www.generali.gr/en/).
+- [x] Answers of these questions can be found in a word document with the specific area of topics around health insurance risk assessment, exemptions etc. (Questions->Answer file).
+- [x] Natural language understanding ([NLU](https://en.wikipedia.org/wiki/Natural_language_understanding)) was required in Greek so we used another service than [LUIS](https://www.luis.ai/home), [Wit.ai](https://wit.ai/).
+- [x] Channel for the bot to be deployed was the custom UI of an internal [Java](https://java.com/pl/download/) web application that is used for communication between brokers and underwriters.
+- [x] Chat bot should reply back to a written query which may be a bit wordy. If bot doesn’t understood the topic on which to answer, it should assign the question to an underwriter.
 
 ### Solution Base Overview
 
 <img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600">
 
-`1` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`2` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`3` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`4` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`4` ![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)
+`4`![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)
 
-`4` ![#C80018](https://placehold.it/15/C80018/000000?text=+)
+`4`![#C80018](https://placehold.it/15/C80018/000000?text=+)
 
-`4` ![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`4`![#E12296](https://placehold.it/15/E12296/000000?text=+)
 
-`5` ![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`5`![#E12296](https://placehold.it/15/E12296/000000?text=+)
 
-`5` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`5`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
-`1` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`2` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`3` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
-`3` ![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`3`![#E12296](https://placehold.it/15/E12296/000000?text=+)
 
-`4` ![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
 <img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="720">
 
