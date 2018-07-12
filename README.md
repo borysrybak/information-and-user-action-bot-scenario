@@ -1,4 +1,4 @@
-# Information and user action bot scenario
+# Information and user action bot scenario in Java
 
 ## Overview
 
@@ -9,6 +9,25 @@ Java implementation example of information and user action bot scenario (QnA Mak
 ### Solution Base Overview
 
 <img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600">
+
+<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">1</span> 1
+
+<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">2</span> 2
+
+<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">3</span> 3
+
+<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">4</span> 4
+
+<span style="text-align: center; border-radius: 50%; background-color: #FA8B04; display: inline-block; height: 25px; width: 25px">4</span> 4
+
+<span style="text-align: center; border-radius: 50%; background-color: #C80018; display: inline-block; height: 25px; width: 25px">4</span> 4
+
+<span style="text-align: center; border-radius: 50%; background-color: #E12296; display: inline-block; height: 25px; width: 25px">4</span> 4
+
+<span style="text-align: center; border-radius: 50%; background-color: #E12296; display: inline-block; height: 25px; width: 25px">5</span> 5
+
+<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">5</span> 5
+
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
@@ -261,3 +280,34 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 ## Credits
 
 ## Helpful Materials
+
+### QnA Maker:
+
+- using Java with QnA Maker API (Creating, Updating, Geting a statuses, Publishing, etc. of Knowledge Base):  https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/java
+- QnA Maker V4.0 APIs Documentation (Java code snippets are included at the bottom of the website): https://westus.dev.cognitive.microsoft.com/docs/services/5a93fcf85b4ccd136866eb37/operations/5ac266295b4ccd1554da75ff
+- QnA Maker Portal: https://qnamaker.ai 
+- What is QnA Maker?: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
+- QnA Maker supported languages: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/languages-supported
+- How Knowledge Base lifecycle should look like: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/development-lifecycle-knowledge-base
+- QnA Maker Dialog (Active Learning), link from old docs: https://www.qnamaker.ai/old/Documentation/ActiveLearning
+
+### Bot Builder SDK (Java):
+
+- Repository: https://github.com/Microsoft/botbuilder-java/wiki
+- Documentation: https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0
+- Sample: https://github.com/Microsoft/botbuilder-java/wiki/building-the-sdk
+
+### Pricing:
+
+- QnA Maker API Service: https://azure.microsoft.com/en-us/pricing/details/cognitive-services/qna-maker/
+  - Free - up to 3 managed documents (KBs) 1MB each | FREE
+  - Standard - no limit | ~8.433EURO/month
+- Azure App Service (for the QnA Maker runtime): https://azure.microsoft.com/en-in/pricing/details/app-service/windows/
+- Azure Search (for the QnA Maker data): https://azure.microsoft.com/en-us/pricing/details/search/
+
+
+|                        | QnA Maker Management | App Service | Azure Search | Limitations                      |
+|------------------------|:--------------------:|:-----------:|:------------:|:--------------------------------:|
+| Experimentation        | Free SKU             | Free Tier   | Free Tier    | Publish Up to 2 KBs, 50 MB size  |
+| Dev/Test Environment   | Standard SKU         | Shared      | Basic        | Publish Up to 4 KBs, 2 GB size   |
+| Production Environment | Standard SKU         | Basic       | Standard     | Publish Up to 49 KBs, 25 GB size	|
