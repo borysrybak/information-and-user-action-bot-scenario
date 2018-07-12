@@ -10,24 +10,42 @@ Java implementation example of information and user action bot scenario (QnA Mak
 
 <img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600">
 
-<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">1</span> 1
-
-<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">2</span> 2
-
-<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">3</span> 3
-
-<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">4</span> 4
-
-<span style="text-align: center; border-radius: 50%; background-color: #FA8B04; display: inline-block; height: 25px; width: 25px">4</span> 4
-
-<span style="text-align: center; border-radius: 50%; background-color: #C80018; display: inline-block; height: 25px; width: 25px">4</span> 4
-
-<span style="text-align: center; border-radius: 50%; background-color: #E12296; display: inline-block; height: 25px; width: 25px">4</span> 4
-
-<span style="text-align: center; border-radius: 50%; background-color: #E12296; display: inline-block; height: 25px; width: 25px">5</span> 5
-
-<span style="text-align: center; border-radius: 50%; background-color: #92C955; display: inline-block; height: 25px; width: 25px">5</span> 5
-
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #92C955; height: 25px; width: 25px">1</div>
+	<p style="display: inline-block">1</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #92C955; height: 25px; width: 25px">2</div>
+	<p style="display: inline-block">2</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #92C955; height: 25px; width: 25px">3</div>
+	<p style="display: inline-block">3</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #92C955; height: 25px; width: 25px">4</div>
+	<p style="display: inline-block">4</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #FA8B04; height: 25px; width: 25px">4</div>
+	<p style="display: inline-block">4</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #C80018; height: 25px; width: 25px">4</div>
+	<p style="display: inline-block">4</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #E12296; height: 25px; width: 25px">4</div>
+	<p style="display: inline-block">4</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #E12296; height: 25px; width: 25px">5</div>
+	<p style="display: inline-block">5</p>
+</div>
+<div>
+	<div style="display: inline-block; text-align: center; border-radius: 50%; background-color: #92C955; height: 25px; width: 25px">5</div>
+	<p style="display: inline-block">5</p>
+</div>
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
