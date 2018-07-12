@@ -4,15 +4,15 @@
 
 ### Description
 
-[Java](https://java.com/pl/download/) implementation example of information and user action bot scenario ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/))
+This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user action bot scenario  ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)).
 
 Engagement included:
 
-- [x] Implementing [QnA Maker](https://www.qnamaker.ai/) service by creating a Q&A bot answering questions of brokers towards the underwriters of [Generali Greece](https://www.generali.gr/en/).
-- [x] Answers of these questions can be found in a word document with the specific area of topics around health insurance risk assessment, exemptions etc. (Questions->Answer file).
+- [x] Implementing [QnA Maker](https://www.qnamaker.ai/) service by creating a **Q&A bot** answering questions of brokers towards the underwriters of [Generali Greece](https://www.generali.gr/en/).
+- [x] Answers of these questions were in a **CSV** file with the specific area of topics around health insurance risk assessment, exemptions etc. (Questions->Answer file).
 - [x] Natural language understanding ([NLU](https://en.wikipedia.org/wiki/Natural_language_understanding)) was required in Greek so we used another service than [LUIS](https://www.luis.ai/home), [Wit.ai](https://wit.ai/).
-- [x] Channel for the bot to be deployed was the custom UI of an internal [Java](https://java.com/pl/download/) web application that is used for communication between brokers and underwriters.
-- [x] Chat bot should reply back to a written query which may be a bit wordy. If bot doesn’t understood the topic on which to answer, it should assign the question to an underwriter.
+- [x] Channel for the bot to be deployed was the custom UI of an internal [Java](https://java.com/pl/download/) web application that is used for **communication between brokers and underwriters**.
+- [x] Reply back to a written query which may be a bit wordy. If topic was not understandable, question was assigned to the underwriter.
 
 ### Solution Base Overview
 
@@ -306,6 +306,7 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 - What is QnA Maker?: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
 - QnA Maker supported languages: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/languages-supported
 - How Knowledge Base lifecycle should look like: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/development-lifecycle-knowledge-base
+- Adding Filters (metadata) to Questions/Answer pairs: https://westus.dev.cognitive.microsoft.com/docs/services/597029932bcd590e74b648fb/operations/597037798a8bb5031800bf5b
 - QnA Maker Dialog (Active Learning), link from old docs: https://www.qnamaker.ai/old/Documentation/ActiveLearning
 
 ### Bot Builder SDK (Java):
