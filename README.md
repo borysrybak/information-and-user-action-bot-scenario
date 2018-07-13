@@ -76,10 +76,13 @@ The flowchart below shows the idea of the scoring process:
   - [Wit.ai Account](#witai-account)
   - [Java Environment](#java-environment)
 - [Usage](#usage)
-  - [Qna Maker](#qna-maker)
+  - [QnA Maker](#qna-maker)
   - [Wit.ai](#witai)
 - [Testing](#testing)
 - [Learnings](#learnings)
+  - [QnA Maker](#qna-maker-learnings)
+  - [Wit.ai](#wit-ai-learnings)
+  - [The nature of the Greek language](#the-nature-of-the-greek-language)
 - [Credits](#credits)
 - [Helpful Materials](#helpful-materials)
 
@@ -288,7 +291,7 @@ private static String getAnswersPost(URL url, String content) throws Exception {
 ```
 <hr>
 
-*Get an answer from question primary method::*
+*Get an answer from question primary method:*
 ```java
 public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Exception {
 
@@ -381,15 +384,15 @@ Another achievement was to test a [Wit.ai](https://wit.ai/) app by providing sen
 
 1. Here [Wit.ai](https://wit.ai/) recognizes an intent by locating the name of sickness and type of action.
 
-   - <img src="assets/wit-ai-test-1.PNG" data-canonical-src="assets/wit-ai-test-1.PNG" width="400">
+   - <img src="assets/wit-ai-test-1.PNG" data-canonical-src="assets/wit-ai-test-1.PNG" width="500">
 
 2. The second example shows that [Wit.ai](https://wit.ai/) can recognize a phone number entity and a type of action.
 
-   - <img src="assets/wit-ai-test-2.PNG" data-canonical-src="assets/wit-ai-test-2.PNG" width="400">
+   - <img src="assets/wit-ai-test-2.PNG" data-canonical-src="assets/wit-ai-test-2.PNG" width="500">
 
 3. Created entities for that test.
 
-   - <img src="assets/wit-ai-test-2a.PNG" data-canonical-src="assets/wit-ai-test-2a.PNG" width="400">
+   - <img src="assets/wit-ai-test-2a.PNG" data-canonical-src="assets/wit-ai-test-2a.PNG" width="500">
 
 ## Learnings
 
