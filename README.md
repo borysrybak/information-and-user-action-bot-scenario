@@ -115,22 +115,24 @@ wit.ai - https://wit.ai
 
 ### Java Environment
 
+- Java SE 6 / 7
+- Java UI Framework
+- Documentum
+
 ## Usage
-
-
 
 ```java
 public class QnaMakerKnowledgeBaseRestClient {
 
-	private static final Logger logger = LoggerFactory.getLogger(QnaMakerKnowledgeBaseRestClient.class);
+  private static final Logger logger = LoggerFactory.getLogger(QnaMakerKnowledgeBaseRestClient.class);
 
-	private static String baseURI = "https://westus.api.cognitive.microsoft.com/qnamaker";
+  private static String baseURI = "https://westus.api.cognitive.microsoft.com/qnamaker";
 
-	private static String host = "";
+  private static String host = "";
 
-	private static String subscriptionKey = "";
+  private static String subscriptionKey = "";
 
-	private static String endpoint_key = "";
+  private static String endpoint_key = "";
 
   private static String primarysKnowledgeBaseKey = "";
   
@@ -142,136 +144,136 @@ public class QnaMakerKnowledgeBaseRestClient {
 ```java
 public JSONObject create(JSONObject createJSONObject) throws Exception {
 
-		JSONObject restOutput = null;
+    JSONObject restOutput = null;
 
-		try {
-			HttpClient httpclient = HttpClients.createDefault();
-			URIBuilder builder = new URIBuilder(baseURI + "/v4.0/knowledgebases/create");
+    try {
+      HttpClient httpclient = HttpClients.createDefault();
+      URIBuilder builder = new URIBuilder(baseURI + "/v4.0/knowledgebases/create");
 
-			URI uri = builder.build();
-			HttpPost request = new HttpPost(uri);
-			request.setHeader("Content-Type", "application/json");
-			request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+      URI uri = builder.build();
+      HttpPost request = new HttpPost(uri);
+      request.setHeader("Content-Type", "application/json");
+      request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
 
-			StringEntity reqEntity = new StringEntity(createJSONObject.toString());
-			request.setEntity(reqEntity);
+      StringEntity reqEntity = new StringEntity(createJSONObject.toString());
+      request.setEntity(reqEntity);
 
-			HttpResponse response = httpclient.execute(request);
-			HttpEntity entity = response.getEntity();
+      HttpResponse response = httpclient.execute(request);
+      HttpEntity entity = response.getEntity();
 
-			if (entity != null) {
-				String entityString = EntityUtils.toString(entity);
-				restOutput = new JSONObject(entityString);
-			}
+      if (entity != null) {
+        String entityString = EntityUtils.toString(entity);
+        restOutput = new JSONObject(entityString);
+      }
 
-		} catch(Exception e) {
-			logger.error("Error while running QnaMakerKnowledgeBaseRestClient.create() with input: " + createJSONObject.toString(), e);
-		}
+    } catch(Exception e) {
+      logger.error("Error while running QnaMakerKnowledgeBaseRestClient.create() with input: " + createJSONObject.toString(), e);
+    }
 
-		return restOutput;
+    return restOutput;
 }
 ```
 
 ```java
 public JSONObject getEndpointkeys() throws Exception {
 
-		JSONObject restOutput = null;
+    JSONObject restOutput = null;
 
-		try {
-			HttpClient httpclient = HttpClients.createDefault();
-			URIBuilder builder = new URIBuilder(baseURI + "/v4.0/endpointkeys");
+    try {
+      HttpClient httpclient = HttpClients.createDefault();
+      URIBuilder builder = new URIBuilder(baseURI + "/v4.0/endpointkeys");
 
-			URI uri = builder.build();
-			HttpGet request = new HttpGet(uri);
-			request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+      URI uri = builder.build();
+      HttpGet request = new HttpGet(uri);
+      request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
 
-			HttpResponse response = httpclient.execute(request);
-			HttpEntity entity = response.getEntity();
+      HttpResponse response = httpclient.execute(request);
+      HttpEntity entity = response.getEntity();
 
-			if (entity != null) {
-				String entityString = EntityUtils.toString(entity);
-				restOutput = new JSONObject(entityString);
-			}
-		} catch(Exception e) {
-			logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getEndpointkeys() ", e);
-		}
+      if (entity != null) {
+        String entityString = EntityUtils.toString(entity);
+        restOutput = new JSONObject(entityString);
+      }
+    } catch(Exception e) {
+      logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getEndpointkeys() ", e);
+    }
 
-		return restOutput;
+    return restOutput;
 }
 ```
 
 ```java
 public JSONObject getAnswers(String kb, String question) throws Exception {
 
-		JSONObject restOutput = null;
+    JSONObject restOutput = null;
 
-		try {
-			URL url = new URL(host + "/knowledgebases/" + kb + "/generateAnswer");
-			String answers = getAnswersPost(url, question);
-			if (answers != null) {
-				restOutput = new JSONObject(answers);
-			}
-		} catch(Exception e) {
-			logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getAnswers() with kb: " + kb + " and question:" + question, e);
-		}
+    try {
+      URL url = new URL(host + "/knowledgebases/" + kb + "/generateAnswer");
+      String answers = getAnswersPost(url, question);
+      if (answers != null) {
+        restOutput = new JSONObject(answers);
+      }
+    } catch(Exception e) {
+      logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getAnswers() with kb: " + kb + " and question:" + question, e);
+    }
 
-		return restOutput;
+    return restOutput;
 }
 ```
 
 ```java
 private static String getAnswersPost(URL url, String content) throws Exception {
-		String restOutput = null;
+    String restOutput = null;
 
-		try {
-			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
-			connection.setRequestProperty("Content-Length", content.length() + "");
-			connection.setRequestProperty("Authorization", "EndpointKey " + endpoint_key);
-			connection.setDoOutput(true);
+    try {
+      HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+      connection.setRequestMethod("POST");
+      connection.setRequestProperty("Content-Type", "application/json");
+      connection.setRequestProperty("Content-Length", content.length() + "");
+      connection.setRequestProperty("Authorization", "EndpointKey " + endpoint_key);
+      connection.setDoOutput(true);
 
-			DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-			byte[] encoded_content = content.getBytes("UTF-8");
-			wr.write(encoded_content, 0, encoded_content.length);
-			wr.flush();
-			wr.close();
+      DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+      byte[] encoded_content = content.getBytes("UTF-8");
+      wr.write(encoded_content, 0, encoded_content.length);
+      wr.flush();
+      wr.close();
 
-			StringBuilder response = new StringBuilder();
-			InputStreamReader inputStreamReader = new InputStreamReader(connection.getInputStream(), "UTF-8");
-			BufferedReader in =new BufferedReader(inputStreamReader);
+      StringBuilder response = new StringBuilder();
+      InputStreamReader inputStreamReader = new InputStreamReader(connection.getInputStream(), "UTF-8");
+      BufferedReader in =new BufferedReader(inputStreamReader);
 
-			String line;
-			while ((line = in.readLine()) != null) {
-				response.append(line);
-			} in .close();
+      String line;
+      while ((line = in.readLine()) != null) {
+        response.append(line);
+      } in .close();
 
-			restOutput = response.toString();
+      restOutput = response.toString();
 
-		} catch(Exception e) {
-			logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getPrimarysKnowledgeBaseAnswers() with url: " + url + " and content:" + content, e);
-		}
+    } catch(Exception e) {
+      logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getPrimarysKnowledgeBaseAnswers() with url: " + url + " and content:" + content, e);
+    }
 
-		return restOutput;
+    return restOutput;
 }
 ```
 
 ```java
 public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Exception {
 
-		JSONObject restOutput = null;
+    JSONObject restOutput = null;
 
-		try {
-			URL url = new URL(host + "/knowledgebases/" + primarysKnowledgeBaseKey + "/generateAnswer");
-			String answers = getAnswersPost(url, question.toString());
-			if (answers != null) {
-				restOutput = new JSONObject(answers);
-			}
-		} catch(Exception e) {
-			logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getPrimarysKnowledgeBaseAnswers() with kb: " + primarysKnowledgeBaseKey + " and question:" + question, e);
-		}
+    try {
+      URL url = new URL(host + "/knowledgebases/" + primarysKnowledgeBaseKey + "/generateAnswer");
+      String answers = getAnswersPost(url, question.toString());
+      if (answers != null) {
+        restOutput = new JSONObject(answers);
+      }
+    } catch(Exception e) {
+      logger.error("Error while running QnaMakerKnowledgeBaseRestClient.getPrimarysKnowledgeBaseAnswers() with kb: " + primarysKnowledgeBaseKey + " and question:" + question, e);
+    }
 
-		return restOutput;
+    return restOutput;
 }
 ```
 
@@ -279,41 +281,41 @@ public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Ex
 
 ```java
 private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceContact, Contact targetContact, String relatedEntityType, String relatedEntityCode, String dialogType, String message) {
-	try {
-		Dialog dialog = null;
-		if (DialogTags.TASK_ASSISTANCE_ANNOUNCEMENT.getCode().equals(dialogType)) {
-			QnaMakerKnowledgeBaseRestClient client = new QnaMakerKnowledgeBaseRestClient();
-			String jsonString = "{\"question\":\"" + message + "\"}";
-			JSONObject restInput = new JSONObject(jsonString);
-			JSONObject restOutput = client.getPrimarysKnowledgeBaseAnswers(restInput);
-			JSONArray jsArray = ((JSONArray) restOutput.getJSONArray("answers"));
-			Double finalScore = 0.00;
-			String finalAnswer = "";
-			if (jsArray != null) {
-				if (jsArray.length() > 0) {
-					for (int i = 0; i < jsArray.length(); i++) {
-						JSONObject jsObject = (JSONObject) jsArray.get(i);
-						String answer = (String) jsObject.get("answer");
-						Double score = (Double) jsObject.get("score");
-						if (score > finalScore) {
-							if (answer != null) {
-								answer = Converters.asTrimmedString(answer);
-								finalScore = score;
-								finalAnswer = answer;
-							}
-						}
-					}
-				}
-			}
-			if (finalAnswer.length() > 0) {
-				dialog = notifyBrokerForComment(principal, sourceContact, targetContact, relatedEntityType, relatedEntityCode, dialogType, finalAnswer);
-			}
-		}
+  try {
+    Dialog dialog = null;
+    if (DialogTags.TASK_ASSISTANCE_ANNOUNCEMENT.getCode().equals(dialogType)) {
+      QnaMakerKnowledgeBaseRestClient client = new QnaMakerKnowledgeBaseRestClient();
+      String jsonString = "{\"question\":\"" + message + "\"}";
+      JSONObject restInput = new JSONObject(jsonString);
+      JSONObject restOutput = client.getPrimarysKnowledgeBaseAnswers(restInput);
+      JSONArray jsArray = ((JSONArray) restOutput.getJSONArray("answers"));
+      Double finalScore = 0.00;
+      String finalAnswer = "";
+      if (jsArray != null) {
+        if (jsArray.length() > 0) {
+          for (int i = 0; i < jsArray.length(); i++) {
+            JSONObject jsObject = (JSONObject) jsArray.get(i);
+            String answer = (String) jsObject.get("answer");
+            Double score = (Double) jsObject.get("score");
+            if (score > finalScore) {
+              if (answer != null) {
+                answer = Converters.asTrimmedString(answer);
+                finalScore = score;
+                finalAnswer = answer;
+              }
+            }
+          }
+        }
+      }
+      if (finalAnswer.length() > 0) {
+        dialog = notifyBrokerForComment(principal, sourceContact, targetContact, relatedEntityType, relatedEntityCode, dialogType, finalAnswer);
+      }
+    }
 
-		return dialog;
-	} catch(Exception e) {
-		throw new DataAccessException("Error while running taskService.autoReplyToBroker", e);
-	}
+    return dialog;
+  } catch(Exception e) {
+    throw new DataAccessException("Error while running taskService.autoReplyToBroker", e);
+  }
 }
 ```
 
