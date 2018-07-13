@@ -30,7 +30,7 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 `4`![#92C955](https://placehold.it/15/92C955/000000?text=+)  These algorithms can invoke a method from NLU service (like [Wit.ai](https://wit.ai/) or [LUIS](https://www.luis.ai/home)) to automate a task within application's backend (in this example it was a generated storage for a document upload).
 
-`4`![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)  Alternatively, invoke a method from [Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), like QnA Maker - to receive an answer regarding expert knowledge around health insurance risk assessments, exemptions, and so forth.
+`4`![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)  Alternatively, invoke a method from [Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), like [QnA Maker](https://www.qnamaker.ai/) - to receive an answer regarding expert knowledge around health insurance risk assessments, exemptions, and so forth.
 
 `4`![#C80018](https://placehold.it/15/C80018/000000?text=+)  Or, invoke a method that search for an entity from the database, like the current status of some deal, or the date of the contract, etc.
 
@@ -44,15 +44,17 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
-`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)  The broker starts a dialog with a bot by typing a query/question into the application chat window.
 
-`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)  A controller is processing input and passing it through different methods and services.
 
-`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)  [QnA Maker](https://www.qnamaker.ai/), which is a service with a Knowledge Base and answers around health insurance - the specific stuff.
 
-`3`![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`3`![#E12296](https://placehold.it/15/E12296/000000?text=+)  [Wit.ai](https://wit.ai/), which supports an [NLU](https://en.wikipedia.org/wiki/Natural_language_understanding) in the Greek language, and can automate specific kind of tasks in place of the underwriter.
 
-`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)  After scoring, the controller updates an application chat window view by providing the right answer or setting up specific resource for the broker.
+
+<hr>
 
 <img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="720">
 
