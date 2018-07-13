@@ -95,15 +95,15 @@ QnA Maker - https://qnamaker.ai
 
 1. To create a service, go to Azure Portal and search for *"QnA Maker"*:
 
-- <img src="assets/qna-maker-resource-1.PNG" data-canonical-src="assets/qna-maker-resource-1.PNG" width="500">
+	- <img src="assets/qna-maker-resource-1.PNG" data-canonical-src="assets/qna-maker-resource-1.PNG" width="500">
 
 2. After you choose it, read the description and click Create:
 
-- <img src="assets/qna-maker-resource-2.PNG" data-canonical-src="assets/qna-maker-resource-2.PNG" width="500">
+	- <img src="assets/qna-maker-resource-2.PNG" data-canonical-src="assets/qna-maker-resource-2.PNG" width="500">
 
 3. Configure your service by naming it, selecting right pricing tier (details about pricing - [here](#pricing)), etc.:
 
-- <img src="assets/qna-maker-resource-3.PNG" data-canonical-src="assets/qna-maker-resource-3.PNG" width="500">
+	- <img src="assets/qna-maker-resource-3.PNG" data-canonical-src="assets/qna-maker-resource-3.PNG" width="500">
 
 ### Wit.ai Account
 
@@ -111,7 +111,7 @@ wit.ai - https://wit.ai
 
 1. Log in with [GitHub](https://github.com/) or [Facebook](https://www.facebook.com/) account:
 
-- <img src="assets/wit-ai-create-1.PNG" data-canonical-src="wit-ai-create-1.PNG" width="500">
+	- <img src="assets/wit-ai-create-1.PNG" data-canonical-src="wit-ai-create-1.PNG" width="500">
 
 ### Java Environment
 
@@ -121,6 +121,23 @@ wit.ai - https://wit.ai
 
 ## Usage
 
+### QnA Maker
+
+1. Follow the instructions in the QnA Maker "Create a knowledge base" view:
+
+	- <img src="assets/qna-maker-create-1.PNG" data-canonical-src="assets/qna-maker-create-1.PNG" width="500">
+
+	- <img src="assets/qna-maker-create-2.PNG" data-canonical-src="assets/qna-maker-create-2.PNG" width="500">
+
+2. Publish Knowledge Base and get requeired Keys and Endpoint addresses (after Publish, go to Settings tab):
+
+	- <img src="assets/qna-maker-keys-1.PNG" data-canonical-src="assets/qna-maker-keys-1.PNG" width="500">
+
+3. Code snippets below represent an implemented basic methods for QnA Maker service.
+
+<hr>
+
+*QnAMaker Service Client (Remember to provide a valid Keys and Endpoints) :*
 ```java
 public class QnaMakerKnowledgeBaseRestClient {
 
@@ -128,19 +145,21 @@ public class QnaMakerKnowledgeBaseRestClient {
 
   private static String baseURI = "https://westus.api.cognitive.microsoft.com/qnamaker";
 
-  private static String host = "";
+  private static String host = "https://<qnamakerservice-name>.azurewebsites.net/qnamaker";
 
-  private static String subscriptionKey = "";
+  private static String subscriptionKey = "<from-azure-portal--go-to-qna-maker-service-resource-keys>";
 
-  private static String endpoint_key = "";
+  private static String endpoint_key = "<endpoint-key>";
 
-  private static String primarysKnowledgeBaseKey = "";
+  private static String primarysKnowledgeBaseKey = "<kbid>";
   
   ...
 
 }
 ```
+<hr>
 
+*Knowledge Base Create method:*
 ```java
 public JSONObject create(JSONObject createJSONObject) throws Exception {
 
@@ -173,7 +192,9 @@ public JSONObject create(JSONObject createJSONObject) throws Exception {
     return restOutput;
 }
 ```
+<hr>
 
+*Get Endpoint keys from a published Knowledge Base:*
 ```java
 public JSONObject getEndpointkeys() throws Exception {
 
@@ -201,7 +222,9 @@ public JSONObject getEndpointkeys() throws Exception {
     return restOutput;
 }
 ```
+<hr>
 
+*Get an answer from question method:*
 ```java
 public JSONObject getAnswers(String kb, String question) throws Exception {
 
@@ -220,7 +243,9 @@ public JSONObject getAnswers(String kb, String question) throws Exception {
     return restOutput;
 }
 ```
+<hr>
 
+*HTTP Service helper method for Get an answer from question method:*
 ```java
 private static String getAnswersPost(URL url, String content) throws Exception {
     String restOutput = null;
@@ -257,7 +282,9 @@ private static String getAnswersPost(URL url, String content) throws Exception {
     return restOutput;
 }
 ```
+<hr>
 
+*Get an answer from question primary method::*
 ```java
 public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Exception {
 
