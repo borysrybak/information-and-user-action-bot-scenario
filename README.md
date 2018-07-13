@@ -34,11 +34,11 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 `4`![#C80018](https://placehold.it/15/C80018/000000?text=+)  Or, invoke a method that search for an entity from the database, like the current status of some deal, or the date of the contract, etc.
 
-`4`![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`4`![#E12296](https://placehold.it/15/E12296/000000?text=+)  In case of a specific kind of query, which is not understandable, the question is assigned to the underwriter...
 
-`5`![#E12296](https://placehold.it/15/E12296/000000?text=+)
+`5`![#E12296](https://placehold.it/15/E12296/000000?text=+)  ... who responds in person.
 
-`5`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`5`![#92C955](https://placehold.it/15/92C955/000000?text=+)  Otherwise, the bot is sending the actions/answers, done by particular services, back to the broker.
 
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
