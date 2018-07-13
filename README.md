@@ -1,10 +1,10 @@
-# Information and user action bot scenario in Java
+# Information and user-action bot, scenario in Java
 
 ## Overview
 
 ### Description
 
-This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user action bot scenario ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)) in [Generali Greece](https://www.generali.gr/en/).
+This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user-action bot ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)) in [Generali Greece](https://www.generali.gr/en/).
 
 The business challenge was to automate the work of a [Generali Greece](https://www.generali.gr/en/) employee (underwriter) and save the time & resources during information exchange with the broker.
 
@@ -14,7 +14,7 @@ Engagement included:
 - [x] Answers of these questions were in a **CSV** file with the specific area of topics around health insurance risk assessment, exemptions etc. (Questions->Answer file).
 - [x] Natural language understanding ([NLU](https://en.wikipedia.org/wiki/Natural_language_understanding)) was required in Greek so we used another service than [LUIS](https://www.luis.ai/home), [Wit.ai](https://wit.ai/).
 - [x] Channel for the bot to be deployed was the custom UI of an internal [Java](https://java.com/pl/download/) web application that is used for **communication between brokers and underwriters**.
-- [x] Reply back to a written query which may be a bit wordy. If topic was not understandable, question was assigned to the underwriter.
+- [x] Not understandable question is assigned to the underwriter directly.
 
 ### Solution Base Overview
 
