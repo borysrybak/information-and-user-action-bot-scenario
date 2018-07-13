@@ -56,7 +56,11 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 <hr>
 
+The flowchart below shows the idea of the scoring process:
+
 <img src="assets/dialog_flowchart.png" data-canonical-src="assets/dialog_flowchart.png" width="720">
+
+**In that case, the score is a value of confidence in each service.**
 
 ## Table of Contents
 
