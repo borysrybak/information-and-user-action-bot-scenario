@@ -384,29 +384,86 @@ Another achievement was to test a [Wit.ai](https://wit.ai/) app by providing sen
 
 1. Here [Wit.ai](https://wit.ai/) recognizes an intent by locating the name of sickness and type of action.
 
-   - <img src="assets/wit-ai-test-1.PNG" data-canonical-src="assets/wit-ai-test-1.PNG" width="500">
+   - <img src="assets/wit-ai-test-1.PNG" data-canonical-src="assets/wit-ai-test-1.PNG" width="600">
 
 2. The second example shows that [Wit.ai](https://wit.ai/) can recognize a phone number entity and a type of action.
 
-   - <img src="assets/wit-ai-test-2.PNG" data-canonical-src="assets/wit-ai-test-2.PNG" width="500">
+   - <img src="assets/wit-ai-test-2.PNG" data-canonical-src="assets/wit-ai-test-2.PNG" width="600">
 
 3. Created entities for that test.
 
-   - <img src="assets/wit-ai-test-2a.PNG" data-canonical-src="assets/wit-ai-test-2a.PNG" width="500">
+   - <img src="assets/wit-ai-test-2a.PNG" data-canonical-src="assets/wit-ai-test-2a.PNG" width="600">
 
 ## Learnings
 
 ### QnA Maker learnings
 
+The QnA Maker documentation shows that the service can support many languages, but in practice, it is entirely different.
+Here you can read more about the supported languages: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/languages-supported
+
+Supposedly, **the language is automatically recognized from the content** of the data sources being extracted. Once you create a new QnA Maker Service and a new Knowledge Base in that service, you can verify that the language has been set correctly. More details about the whole process you can find here: https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/language-knowledge-base
+
+:bug: :bug: :bug: **In practice it is always English** :bug: :bug: :bug:
+
+I was trying to fix that in many different ways...
+
+- by uploading Question/Answer file before KB creation
+- by uploading Question/Answer file after KB creation
+- by providing Questions and Answers manually
+- by creating different resources with a different pricing tier
+- by creating a standalone Azure Search resource and trying to modify it and connect it with the existing resource of QnA Maker
+
+...unfortunately without any success.
+
+Here you can investigate my steps:
+
+1. Langauge support analyzer investigation in testkb index resource.
+
+   - <img src="assets/analyzer-1.PNG" data-canonical-src="assets/analyzer-1.PNG" width="500">
+
+2. Langauge support analyzer investigation in specific index resource.
+
+   - <img src="assets/analyzer-2.PNG" data-canonical-src="assets/analyzer-2.PNG" width="500">
+
+3. Creating new Azure Search resource.
+
+   - <img src="assets/analyzer-3.PNG" data-canonical-src="assets/analyzer-3.PNG" width="500">
+
+4. Updating keys and names in App Service.
+
+   - <img src="assets/azure-search-2.PNG" data-canonical-src="assets/azure-search-2.PNG" width="500">
+
 ### Wit.ai learnings
 
+Unfortunately, the Greek language in the Wit.ai service is still in beta, so the recognition of such things as contact is difficult to implement.
+
+1. Here you can see my manual selection of a name "John", but still without any improvement after clicking "Validate".
+
+   - <img src="assets/wit-ai-test-3.PNG" data-canonical-src="assets/wit-ai-test-3.PNG" width="600">
+
 ### The nature of the Greek language
+
+With these difficulties (above), we are also unable to determine how the algorithm behaves when we include Greek-language specific letters or words.
+The endings of words or accents that occur with individual letters are still binary values that can be understood by the machine differently.
+
+For example brokers by typing a query can be in a hurry, and they will type
+
+- **εχω**
+
+instead of
+
+- **έχω**
+
+which means 'I have'.
+
+In that particular case, the meaning is the same, with or without a tone/accent. However imagine words with a different meaning, after erasing such tone or accent.
+
 
 ## Credits
 
 - Antonis Apergis - Software Development Supervisor, [Generali Greece](https://www.generali.gr/en/)
 - Christodoulos Rokos - Senior Software Engineer, [Generali Greece](https://www.generali.gr/en/)
-- Borys Rybak - Software Engineer, Microsoft
+- Borys Rybak (*who fell in love with Greece*) - Software Engineer, Microsoft
 
 <img src="assets/team.jpg" data-canonical-src="team.jpg" width="480">
 
