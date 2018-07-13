@@ -76,6 +76,8 @@ The flowchart below shows the idea of the scoring process:
   - [Wit.ai Account](#witai-account)
   - [Java Environment](#java-environment)
 - [Usage](#usage)
+  - [Qna Maker](#qna-maker)
+  - [Wit.ai](#witai)
 - [Testing](#testing)
 - [Learnings](#learnings)
 - [Credits](#credits)
@@ -322,6 +324,8 @@ public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Ex
 
 ## Testing
 
+Here is a code fragment of an auto-reply method, which invokes a code from implemented QnA Service Client.
+
 ```java
 private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceContact, Contact targetContact, String relatedEntityType, String relatedEntityCode, String dialogType, String message) {
   try {
@@ -362,11 +366,38 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 }
 ```
 
-<img src="assets/example-1.gif" data-canonical-src="assets/example-1.gif" width="400">
+The goal was to receive an answer with details about contact to [Generali Greece](https://www.generali.gr/en/).
+You can see the results of the actions on the following animations:
 
-<img src="assets/example-2.gif" data-canonical-src="assets/example-2.gif" width="400">
+1. Simple query, by providing a keyword *"sms"*.
+
+   - <img src="assets/example-1.gif" data-canonical-src="assets/example-1.gif" width="400">
+
+2. Complex query, by providing a sentence in greek language.
+
+   - <img src="assets/example-2.gif" data-canonical-src="assets/example-2.gif" width="400">
+
+Another achievement was to test a [Wit.ai](https://wit.ai/) app by providing sentences in the Greek language:
+
+1. Here [Wit.ai](https://wit.ai/) recognizes an intent by locating the name of sickness and type of action.
+
+   - <img src="assets/wit-ai-test-1.PNG" data-canonical-src="assets/wit-ai-test-1.PNG" width="400">
+
+2. The second example shows that [Wit.ai](https://wit.ai/) can recognize a phone number entity and a type of action.
+
+   - <img src="assets/wit-ai-test-2.PNG" data-canonical-src="assets/wit-ai-test-2.PNG" width="400">
+
+3. Created entities for that test.
+
+   - <img src="assets/wit-ai-test-2a.PNG" data-canonical-src="assets/wit-ai-test-2a.PNG" width="400">
 
 ## Learnings
+
+### QnA Maker learnings
+
+### Wit.ai learnings
+
+### The nature of the Greek language
 
 ## Credits
 
