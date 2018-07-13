@@ -71,8 +71,7 @@ The flowchart below shows the idea of the scoring process:
 - [Prerequisites](#prerequisites)
   - [Azure Subscription](#azure-subscription)
   - [QnA Maker resource](#qna-maker-resource)
-  - [GitHub Account](#github-account)
-  - [Wit.ai Account](#wit.ai-account)
+  - [Wit.ai Account](#witai-account)
   - [Java Environment](#java-environment)
 - [Usage](#usage)
 - [Testing](#testing)
@@ -92,9 +91,27 @@ Various ways to create an Azure Account with a subscription.
 
 ### QnA Maker resource
 
-### GitHub Account
+QnA Maker - https://qnamaker.ai
+
+1. To create a service, go to Azure Portal and search for *"QnA Maker"*:
+
+- <img src="assets/qna-maker-resource-1.png" data-canonical-src="assets/qna-maker-resource-1.png" width="500">
+
+2. After you choose it, read the description and click Create:
+
+- <img src="assets/qna-maker-resource-2.png" data-canonical-src="assets/qna-maker-resource-2.png" width="500">
+
+3. Configure your service by naming it, selecting right pricing tier (details about pricing - [here](#pricing)), etc.:
+
+- <img src="assets/qna-maker-resource-3.png" data-canonical-src="assets/qna-maker-resource-3.png" width="500">
 
 ### Wit.ai Account
+
+wit.ai - https://wit.ai
+
+1. Log in with [GitHub](https://github.com/) or [Facebook](https://www.facebook.com/) account:
+
+- <img src="assets/wit-ai-create-1.png" data-canonical-src="wit-ai-create-1.png" width="500">
 
 ### Java Environment
 
