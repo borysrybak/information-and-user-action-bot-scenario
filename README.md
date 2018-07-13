@@ -16,13 +16,17 @@ Engagement included:
 
 ### Solution Base Overview
 
+The target solution and its architecture has various services implemented, resulting in a fully automated information exchange channel. At the moment, the solution includes implemented [QnA Maker](https://www.qnamaker.ai/) service and the primary method of automating tasks in the internal tool (previously supported by the underwriter and now by [Wit.ai](https://wit.ai/))).
+
+Below are descriptions of solution architecture (in an advanced and basic scenario):
+
 <img src="assets/first_main_architecture.png" data-canonical-src="assets/first_main_architecture.png" width="600">
 
-`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`1`![#92C955](https://placehold.it/15/92C955/000000?text=+)  The broker starts an application, and his credentials are validated.
 
-`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`2`![#92C955](https://placehold.it/15/92C955/000000?text=+)  Broker starts a dialog with a bot by typing a question or a command/task.
 
-`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`3`![#92C955](https://placehold.it/15/92C955/000000?text=+)  The question is processed by a Bot Service algorithms and passed through the specific methods of implemented services. There are a few examples of service incorporation.
 
 `4`![#92C955](https://placehold.it/15/92C955/000000?text=+)
 
@@ -300,7 +304,7 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 - Christodoulos Rokos - Senior Software Engineer, [Generali Greece](https://www.generali.gr/en/)
 - Borys Rybak - Software Engineer, Microsoft
 
-<img src="assets/team.jpg" data-canonical-src="team.jpg" width="720">
+<img src="assets/team.jpg" data-canonical-src="team.jpg" width="480">
 
 ## Helpful Materials
 
