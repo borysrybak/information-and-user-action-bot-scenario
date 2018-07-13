@@ -4,7 +4,7 @@
 
 ### Description
 
-This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user action bot scenario  ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)).
+This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user action bot scenario ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)) in [Generali Greece](https://www.generali.gr/en/).
 
 Engagement included:
 
@@ -295,6 +295,12 @@ private Dialog autoReplyToBroker(GeneraliPrincipal principal, Contact sourceCont
 ## Learnings
 
 ## Credits
+
+- Antonis Apergis - Software Development Supervisor, [Generali Greece](https://www.generali.gr/en/)
+- Christodoulos Rokos - Senior Software Engineer, [Generali Greece](https://www.generali.gr/en/)
+- Borys Rybak - Software Engineer, Microsoft
+
+<img src="assets/team.jpg" data-canonical-src="team.jpg" width="720">
 
 ## Helpful Materials
 
