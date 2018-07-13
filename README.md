@@ -95,15 +95,15 @@ QnA Maker - https://qnamaker.ai
 
 1. To create a service, go to Azure Portal and search for *"QnA Maker"*:
 
-	- <img src="assets/qna-maker-resource-1.PNG" data-canonical-src="assets/qna-maker-resource-1.PNG" width="500">
+   - <img src="assets/qna-maker-resource-1.PNG" data-canonical-src="assets/qna-maker-resource-1.PNG" width="500">
 
 2. After you choose it, read the description and click Create:
 
-	- <img src="assets/qna-maker-resource-2.PNG" data-canonical-src="assets/qna-maker-resource-2.PNG" width="500">
+   - <img src="assets/qna-maker-resource-2.PNG" data-canonical-src="assets/qna-maker-resource-2.PNG" width="500">
 
 3. Configure your service by naming it, selecting right pricing tier (details about pricing - [here](#pricing)), etc.:
 
-	- <img src="assets/qna-maker-resource-3.PNG" data-canonical-src="assets/qna-maker-resource-3.PNG" width="500">
+   - <img src="assets/qna-maker-resource-3.PNG" data-canonical-src="assets/qna-maker-resource-3.PNG" width="500">
 
 ### Wit.ai Account
 
@@ -111,7 +111,7 @@ wit.ai - https://wit.ai
 
 1. Log in with [GitHub](https://github.com/) or [Facebook](https://www.facebook.com/) account:
 
-	- <img src="assets/wit-ai-create-1.PNG" data-canonical-src="wit-ai-create-1.PNG" width="500">
+   - <img src="assets/wit-ai-create-1.PNG" data-canonical-src="wit-ai-create-1.PNG" width="500">
 
 ### Java Environment
 
@@ -123,17 +123,17 @@ wit.ai - https://wit.ai
 
 ### QnA Maker
 
-1. Follow the instructions in the QnA Maker "Create a knowledge base" view:
+1. Follow the instructions in the [QnA Maker](https://www.qnamaker.ai/) Portal in "Create a knowledge base" view:
 
-	- <img src="assets/qna-maker-create-1.PNG" data-canonical-src="assets/qna-maker-create-1.PNG" width="500">
+   - <img src="assets/qna-maker-create-1.PNG" data-canonical-src="assets/qna-maker-create-1.PNG" width="500">
 
-	- <img src="assets/qna-maker-create-2.PNG" data-canonical-src="assets/qna-maker-create-2.PNG" width="500">
+   - <img src="assets/qna-maker-create-2.PNG" data-canonical-src="assets/qna-maker-create-2.PNG" width="500">
 
 2. Publish Knowledge Base and get requeired Keys and Endpoint addresses (after Publish, go to Settings tab):
 
-	- <img src="assets/qna-maker-keys-1.PNG" data-canonical-src="assets/qna-maker-keys-1.PNG" width="500">
+   - <img src="assets/qna-maker-keys-1.PNG" data-canonical-src="assets/qna-maker-keys-1.PNG" width="500">
 
-3. Code snippets below represent an implemented basic methods for QnA Maker service.
+3. Code snippets below represent an implemented basic methods for [QnA Maker](https://www.qnamaker.ai/) service:
 
 <hr>
 
@@ -147,7 +147,7 @@ public class QnaMakerKnowledgeBaseRestClient {
 
   private static String host = "https://<qnamakerservice-name>.azurewebsites.net/qnamaker";
 
-  private static String subscriptionKey = "<from-azure-portal--go-to-qna-maker-service-resource-keys>";
+  private static String subscriptionKey = "<from-azure-portal--go-to-qna-maker-service-resource-management-keys>";
 
   private static String endpoint_key = "<endpoint-key>";
 
@@ -303,6 +303,20 @@ public JSONObject getPrimarysKnowledgeBaseAnswers(JSONObject question) throws Ex
     return restOutput;
 }
 ```
+
+### Wit.ai
+
+1. To create an app in [Wit.ai](https://wit.ai/), click on the PLUS symbol:
+
+   - <img src="assets/wit-ai-create-2.PNG" data-canonical-src="wit-ai-create-2.PNG" width="500">
+
+2. Add name and description and choose desired language (important!):
+
+   - <img src="assets/wit-ai-create-3.PNG" data-canonical-src="wit-ai-create-3.PNG" width="500">
+
+3. Start by adding more and more examples of sentences, and edit/add entities (intents, [Wit.ai](https://wit.ai/) specifics or your entities):
+
+   - <img src="assets/wit-ai-create-4.PNG" data-canonical-src="wit-ai-create-4.PNG" width="500">
 
 ## Testing
 
