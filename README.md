@@ -95,15 +95,15 @@ QnA Maker - https://qnamaker.ai
 
 1. To create a service, go to Azure Portal and search for *"QnA Maker"*:
 
-- <img src="assets/qna-maker-resource-1.png" data-canonical-src="assets/qna-maker-resource-1.png" width="500">
+- <img src="assets/qna-maker-resource-1.PNG" data-canonical-src="assets/qna-maker-resource-1.PNG" width="500">
 
 2. After you choose it, read the description and click Create:
 
-- <img src="assets/qna-maker-resource-2.png" data-canonical-src="assets/qna-maker-resource-2.png" width="500">
+- <img src="assets/qna-maker-resource-2.PNG" data-canonical-src="assets/qna-maker-resource-2.PNG" width="500">
 
 3. Configure your service by naming it, selecting right pricing tier (details about pricing - [here](#pricing)), etc.:
 
-- <img src="assets/qna-maker-resource-3.png" data-canonical-src="assets/qna-maker-resource-3.png" width="500">
+- <img src="assets/qna-maker-resource-3.PNG" data-canonical-src="assets/qna-maker-resource-3.PNG" width="500">
 
 ### Wit.ai Account
 
@@ -111,7 +111,7 @@ wit.ai - https://wit.ai
 
 1. Log in with [GitHub](https://github.com/) or [Facebook](https://www.facebook.com/) account:
 
-- <img src="assets/wit-ai-create-1.png" data-canonical-src="wit-ai-create-1.png" width="500">
+- <img src="assets/wit-ai-create-1.PNG" data-canonical-src="wit-ai-create-1.PNG" width="500">
 
 ### Java Environment
 
