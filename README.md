@@ -40,6 +40,9 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 `5`![#92C955](https://placehold.it/15/92C955/000000?text=+)  Otherwise, the bot is sending the actions/answers, done by particular services, back to the broker.
 
+<hr>
+<br>
+
 <img src="assets/dialog_architecture.png" data-canonical-src="assets/dialog_architecture.png" width="660">
 
 `1`![#92C955](https://placehold.it/15/92C955/000000?text=+)
