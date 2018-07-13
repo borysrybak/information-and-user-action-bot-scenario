@@ -16,7 +16,7 @@ Engagement included:
 
 ### Solution Base Overview
 
-The target solution and its architecture has various services implemented, resulting in a fully automated information exchange channel. At the moment, the solution includes implemented [QnA Maker](https://www.qnamaker.ai/) service and the primary method of automating tasks in the internal tool (previously supported by the underwriter and now by [Wit.ai](https://wit.ai/))).
+The target solution and its architecture has various services implemented, resulting in a fully automated information exchange channel. At the moment, the solution includes implemented [QnA Maker](https://www.qnamaker.ai/) service and the primary method of automating tasks in the internal tool (previously supported by the underwriter and now by [Wit.ai](https://wit.ai/)).
 
 Below are descriptions of solution architecture (in an advanced and basic scenario):
 
@@ -28,11 +28,11 @@ Below are descriptions of solution architecture (in an advanced and basic scenar
 
 `3`![#92C955](https://placehold.it/15/92C955/000000?text=+)  The question is processed by a Bot Service algorithms and passed through the specific methods of implemented services. There are a few examples of service incorporation.
 
-`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)
+`4`![#92C955](https://placehold.it/15/92C955/000000?text=+)  These algorithms can invoke a method from NLU service (like [Wit.ai](https://wit.ai/) or [LUIS](https://www.luis.ai/home)) to automate a task within application's backend (in this example it was a generated storage for a document upload).
 
-`4`![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)
+`4`![#FA8B04](https://placehold.it/15/FA8B04/000000?text=+)  Alternatively, invoke a method from [Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), like QnA Maker - to receive an answer regarding expert knowledge around health insurance risk assessments, exemptions, and so forth.
 
-`4`![#C80018](https://placehold.it/15/C80018/000000?text=+)
+`4`![#C80018](https://placehold.it/15/C80018/000000?text=+)  Or, invoke a method that search for an entity from the database, like the current status of some deal, or the date of the contract, etc.
 
 `4`![#E12296](https://placehold.it/15/E12296/000000?text=+)
 
