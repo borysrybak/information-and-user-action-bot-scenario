@@ -6,6 +6,8 @@
 
 This repository contains a proof of concept materials and [Java](https://java.com/pl/download/) code examples that were used in the creation and implementation of information and user action bot scenario ([QnA Maker](https://www.qnamaker.ai/) + [Wit.ai](https://wit.ai/)) in [Generali Greece](https://www.generali.gr/en/).
 
+The business challenge was to automate the work of a [Generali Greece](https://www.generali.gr/en/) employee (underwriter) and save the time & resources during information exchange with the broker.
+
 Engagement included:
 
 - [x] Implementing [QnA Maker](https://www.qnamaker.ai/) service by creating a **Q&A bot** answering questions of brokers towards the underwriters of [Generali Greece](https://www.generali.gr/en/).
