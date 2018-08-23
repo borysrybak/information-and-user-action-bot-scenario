@@ -8,7 +8,7 @@ This repository contains a proof of concept materials and [Java](https://java.co
 
 The business challenge was to automate the work of a [Generali Greece](https://www.generali.gr/en/) employee (underwriter) and save the time & resources during information exchange with the broker.
 
-Engagement included:
+Challenges:
 
 - [x] Implementing [QnA Maker](https://www.qnamaker.ai/) service by creating a **Q&A bot** answering questions of brokers towards the underwriters of [Generali Greece](https://www.generali.gr/en/).
 - [x] Answers of these questions were in a **CSV** file with the specific area of topics around health insurance risk assessment, exemptions etc. (Questions->Answer file).
